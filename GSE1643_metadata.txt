@@ -1,0 +1,41 @@
+Sample	Tissue_type
+GSM27778	20000 lower lobe
+GSM27779	20002 lower lobe
+GSM27780	20002 upper lobe
+GSM27781	20008 lower lobe
+GSM27782	20008 upper lobe
+GSM27783	20010 lower lobe
+GSM27784	20010 upper lobe
+GSM27785	20014 lower lobe
+GSM27786	20015 lower lobe
+GSM27787	20015 upper lobe
+GSM27788	20016 lower lobe
+GSM27789	20017 lower lobe
+GSM27790	20017 upper lobe
+GSM27791	20021 lower lobe
+GSM27792	20021 upper lobe
+GSM27793	20024 lower lobe
+GSM27794	4804 lower lobe
+GSM27795	4816 lower lobe
+GSM27796	4818 lower lobe
+GSM27797	4824 lower lobe
+GSM27798	4825 lower lobe
+GSM27799	4826 lower lobe
+GSM27800	4827 lower lobe replicate 1
+GSM27801	4827 lower lobe replicate 2
+GSM27802	4827 lower lobe replicate 3
+GSM27803	4827 lower lobe replicate 4
+GSM27804	4827 lower lobe replicate 5
+GSM27820	4827 upper lobe replicate 1
+GSM27821	4827 upper lobe replicate 2
+GSM27822	4827 upper lobe replicate 3
+GSM27823	4827 upper lobe replicate 4
+GSM27824	4827 upper lobe replicate 5
+GSM27825	4851 lower lobe
+GSM27826	4859 lower lobe
+GSM27827	4860 lower lobe
+GSM27828	4863 lower lobe
+GSM27829	4874 lower lobe
+GSM27830	4874 upper lobe
+GSM27831	4878 lower lobe
+GSM27832	4878 upper lobe
