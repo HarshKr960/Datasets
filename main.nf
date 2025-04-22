@@ -2,9 +2,32 @@
 
 nextflow.enable.dsl=2
 
-// Define input channel with dummy FASTQ files
-Channel.fromPath('data/*.fastq') \
-    .set { fastq_files }
+// Generate synthetic FASTQ files if they don't exist
+process GENERATE_FASTQ {
+    tag "generate"
+
+    output:
+    path "data/sample1.fastq"
+    path "data/sample2.fastq"
+
+    script:
+    """
+    mkdir -p data
+    echo -e "@SEQ_ID\\nGATTTGGGG\\n+\\nIIIIIIIII" > data/sample1.fastq
+    echo -e "@SEQ_ID\\nCCTTAGGGA\\n+\\nIIIIIIIII" > data/sample2.fastq
+    """
+}
+
+// Define input channel with generated FASTQ files
+workflow {
+    generate_fastq_output = GENERATE_FASTQ()
+
+    Channel
+        .fromPath(generate_fastq_output)
+        .set { fastq_files }
+
+    fastq_files | ALIGN_READS | SUMMARIZE
+}
 
 // Process to simulate alignment
 process ALIGN_READS {
@@ -35,9 +58,4 @@ process SUMMARIZE {
     """
     echo "Processed ${bam_file}" >> summary.txt
     """
-}
-
-// Launch the pipeline
-workflow {
-    fastq_files | ALIGN_READS | SUMMARIZE
 }
