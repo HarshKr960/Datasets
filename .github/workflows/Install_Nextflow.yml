@@ -1,0 +1,16 @@
+name: Nextflow RNA-Seq Pipeline CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y openjdk-11-jdk curl
+          curl -s https://get.nextflow.io | bash
+      - name: Run Nextflow pipeline
+        run: |
+          echo "🎉 Nextflow Installed"
